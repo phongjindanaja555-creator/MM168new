@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASj"
+    crossorigin="anonymous"
+  >
+
+  <title>แนะนำเพื่อนรับเครดิตฟรี 50 บาทอย่าพลาด!!</title>
+
+  <!-- LINE LIFF SDK -->
+  <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ================================
+       ส่วนหัวเว็บไซต์
+       ================================ -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+
+      <span class="navbar-brand mb-0 h1">
+
+        <!-- เปลี่ยนรูปโลโก้ตรงนี้ -->
+        <img
+          src="https://sv1.img.in.th/w2dSg.jpg"
+          alt="Logo"
+          width="50"
+          height="50"
+        >
+
+        <!-- เปลี่ยนชื่อเว็บตรงนี้ -->
+        &nbsp;&nbsp;&nbsp;MIAMI999 เว็บตรงอันดับ 1 ในไทย
+
+      </span>
+
+    </div>
+  </nav>
+
+
+  <!-- ================================
+       ส่วน Banner / ปุ่มแชร์
+       ================================ -->
+  <div class="card text-center">
+
+    <div class="card-header">
+
+      <!--
+        เปลี่ยนรูป Banner ตรงนี้
+        ขนาดแนะนำ 900x1800 ตามไฟล์เดิม
+      -->
+      <button type="button" id="ssdt" class="btn">
+        <img
+          src="https://sv1.img.in.th/w2PUz.jpg"
+          class="img-fluid"
+          alt="โปรโมชั่น"
+        >
+      </button>
+
+      <div class="card-footer text-muted">
+        มีแอดมินบริการตลอด 24 ชม.
+      </div>
+
+    </div>
+  </div>
+
+
+  <script>
+
+    // ==========================================
+    // ตั้งค่าเมื่อหน้าเว็บโหลดเสร็จ
+    // ==========================================
+    window.onload = function (e) {
+
+      // LIFF ID ของคุณ
+      liff.init(
+        {
+          liffId: "1657080337-aprDQwe8"
+        },
+        function () {
+
+          // ==========================================
+          // ตรวจสอบว่า Login LINE แล้วหรือยัง
+          // ==========================================
+          if (liff.isLoggedIn()) {
+
+            // รับค่า refer จาก URL ถ้ามี
+            var iqd = getParameterByName("refer");
+
+            // ปุ่ม Banner สำหรับเปิด Share Target Picker
+            var ss = document.getElementById("ssdt");
+
+            // ==========================================
+            // เมื่อผู้ใช้กดปุ่ม Banner
+            // ==========================================
+            ss.onclick = () => {
+
+              // ==========================================
+              // รูปภาพที่จะใช้ใน Flex Message
+              // เปลี่ยนรูปตรงนี้
+              // ==========================================
+              var cover = "https://sv1.img.in.th/w2PUz.jpg";
+
+              // ==========================================
+              // LINE Official Account
+              // เปลี่ยนลิงก์แอดมินตรงนี้
+              // ==========================================
+              var line = "https://lin.ee/gwKJYyX";
+
+              // ==========================================
+              // LIFF URL
+              // ==========================================
+              var liffUrl = "https://liff.line.me/1657080337-aprDQwe8";
+
+
+              // ==========================================
+              // Flex Message
+              // ==========================================
+              var jk = [
+                {
+                  "type": "flex",
+
+                  // ข้อความที่ LINE ใช้แสดงตัวอย่างก่อนแชร์
+                  "altText": "รับเครดิตฟรี 50 บาทง่ายๆ!",
+
+                  "contents": {
+
+                    "type": "bubble",
+                    "direction": "ltr",
+
+                    // ==========================================
+                    // รูปภาพด้านบนของ Flex
+                    // เปลี่ยนรูปตรงนี้
+                    // ขนาดแนะนำ 1040x1040
+                    // ==========================================
+                    "hero": {
+                      "type": "image",
+                      "url": "https://sv1.img.in.th/w22By.jpg",
+                      "size": "full",
+                      "aspectRatio": "1:1",
+                      "aspectMode": "fit",
+                      "backgroundColor": "#FFFFFFFF"
+                    },
+
+                    // ==========================================
+                    // ส่วนข้อความ
+                    // ==========================================
+                    "body": {
+                      "type": "box",
+                      "layout": "vertical",
+                      "backgroundColor": "#000000",
+
+                      "contents": [
+
+                        {
+                          "type": "box",
+                          "layout": "vertical",
+                          "backgroundColor": "#FFFFFF",
+                          "cornerRadius": "20px",
+
+                          "contents": [
+                            {
+                              "type": "text",
+
+                              // เปลี่ยนชื่อเว็บตรงนี้
+                              "text": "MIAMI999",
+
+                              "weight": "bold",
+                              "size": "xxl",
+                              "color": "#000000",
+                              "align": "center",
+                              "gravity": "center",
+                              "contents": []
+                            }
+                          ]
+                        },
+
+                        {
+                          "type": "box",
+                          "layout": "vertical",
+                          "margin": "lg",
+
+                          "contents": [
+
+                            {
+                              "type": "text",
+
+                              // เปลี่ยนข้อความโปรโมชั่นตรงนี้
+                              "text": "เเจกเครดิตฟรี 50 เล่นง่าย",
+
+                              "color": "#FFFFFF",
+                              "align": "center",
+                              "wrap": true,
+                              "contents": []
+                            },
+
+                            {
+                              "type": "text",
+
+                              // เปลี่ยนข้อความตรงนี้
+                              "text": "จ่ายจริงถอนเงินสดได้จริง",
+
+                              "color": "#FFFFFF",
+                              "align": "center",
+                              "gravity": "center",
+                              "contents": []
+                            }
+
+                          ]
+                        }
+
+                      ]
+                    },
+
+                    // ==========================================
+                    // ส่วนปุ่มด้านล่าง
+                    // ==========================================
+                    "footer": {
+
+                      "type": "box",
+                      "layout": "horizontal",
+                      "position": "relative",
+
+                      // เปลี่ยนสีพื้นหลังส่วนปุ่มตรงนี้
+                      "backgroundColor": "#330033",
+
+                      "contents": [
+
+                        {
+                          "type": "button",
+
+                          "action": {
+                            "type": "uri",
+
+                            // เปลี่ยนชื่อปุ่มตรงนี้
+                            "label": "ติดต่อแอดมิน",
+
+                            // เปลี่ยนลิงก์แอดมินตรงนี้
+                            "uri": "https://lin.ee/gwKJYyX"
+                          },
+
+                          // เปลี่ยนสีปุ่มติดต่อแอดมินตรงนี้
+                          "color": "#CC0000",
+
+                          "style": "primary",
+                          "gravity": "center"
+                        },
+
+                        {
+                          "type": "button",
+
+                          "action": {
+                            "type": "uri",
+
+                            // ชื่อปุ่มแชร์
+                            "label": "เเชร์ให้เพื่อน",
+
+                            // LIFF URL สำหรับเปิดหน้าแชร์
+                            "uri": "https://liff.line.me/1657080337-aprDQwe8"
+                          },
+
+                          // เปลี่ยนสีปุ่มแชร์ตรงนี้
+                          "color": "#00CC00",
+
+                          "height": "md",
+                          "style": "primary"
+                        }
+
+                      ]
+                    },
+
+                    // ==========================================
+                    // สีพื้นหลังแต่ละส่วน
+                    // ==========================================
+                    "styles": {
+
+                      "hero": {
+                        "backgroundColor": "#000000",
+                        "separator": true,
+                        "separatorColor": "#000000"
+                      },
+
+                      "body": {
+                        "backgroundColor": "#000000",
+                        "separator": true,
+                        "separatorColor": "#000000"
+                      },
+
+                      "footer": {
+                        "backgroundColor": "#000000",
+                        "separator": true,
+                        "separatorColor": "#000000"
+                      }
+
+                    }
+
+                  }
+                }
+              ];
+
+
+              // ==========================================
+              // เปิดหน้าต่างให้เลือกเพื่อน/กลุ่มเพื่อแชร์
+              // ==========================================
+              shareflex(jk);
+
+            };
+
+          } else {
+
+            // ==========================================
+            // ถ้ายังไม่ได้ Login ให้เปิด LINE Login
+            // ==========================================
+            liff.login();
+
+          }
+
+        }
+      );
+
+
+      // ==========================================
+      // ส่ง Flex Message
+      // ==========================================
+      function sendflex(flex) {
+
+        liff.sendMessages(flex).then(function () {
+
+          liff.closeWindow();
+
+        });
+
+      }
+
+
+      // ==========================================
+      // เปิด Share Target Picker
+      // ==========================================
+      function shareflex(flex) {
+
+        liff.shareTargetPicker(flex).then(function () {
+
+          liff.closeWindow();
+
+        });
+
+      }
+
+
+      // ==========================================
+      // อ่านค่าจาก URL เช่น ?refer=123
+      // ==========================================
+      function getParameterByName(name, url) {
+
+        if (!url) {
+          url = window.location.href;
+        }
+
+        name = name.replace(/[\[\]]/g, "\\$&");
+
+        var regex = new RegExp(
+          "[?&]" + name + "(=([^&#]*)|&|#|$)"
+        );
+
+        var results = regex.exec(url);
+
+        if (!results) {
+          return null;
+        }
+
+        if (!results[2]) {
+          return "";
+        }
+
+        return decodeURIComponent(
+          results[2].replace(/\+/g, " ")
+        );
+      }
+
+    };
+
+  </script>
+
+
+  <!-- ==========================================
+       Bootstrap JavaScript
+       ========================================== -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+</body>
+</html>
